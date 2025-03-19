@@ -1,7 +1,7 @@
 # GMSF Frontend - Laura's Branch
 
 ## Overview
-Esta rama (`laura`) se dedica al desarrollo frontend del proyecto GMSF (Gestión y Monitoreo de Servicios Formativos) utilizando tecnologías web modernas. Aquí, implementaré los componentes y la funcionalidad de la interfaz de usuario con React, TypeScript y Tailwind CSS.
+Esta rama (`laura`) se dedica al desarrollo frontend del proyecto GMSF (GYM Management Software) utilizando tecnologías web modernas. Aquí, implementaré los componentes y la funcionalidad de la interfaz de usuario con React, TypeScript y Tailwind CSS.
 
 ## Tech Stack
 - **React**
