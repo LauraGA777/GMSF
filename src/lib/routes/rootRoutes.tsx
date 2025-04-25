@@ -4,13 +4,17 @@ import { dashboardRoutes } from "@/features/dashboard/routes/dashboardRoutes";
 import { usuarioRoutes } from "@/features/usuarios/routes/usuarioRoutes";
 import { servicioPersonalizadoRoutes } from "@/features/serviciosPersonalizados/routes/servicioPersonalizadoRoutes";
 import { ProtectedRoute } from "@/components/auth/protected-route";
+import { asistenciaRoutes } from "@/features/asistencias/routes/asistenciaRoutes";
+import { membresiaRoutes } from "@/features/membresias/routes/membresiaRoutes";
 
 // Rutas públicas (no requieren autenticación)
 const publicRoutes = [...authRoutes];
 
 // Rutas protegidas (requieren autenticación)
 const protectedRoutesConfig = [
+    ...asistenciaRoutes,
     ...dashboardRoutes,
+    ...membresiaRoutes,
     ...usuarioRoutes,
     ...servicioPersonalizadoRoutes,
 ];

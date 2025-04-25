@@ -380,8 +380,7 @@ export default function ProfileEditor() {
                             onClick={() => {
                                 setShowCancelDialog(false)
                                 form.reset(defaultValues)
-                            }}
-                        >
+                            }}>
                             Descartar cambios
                         </Button>
                     </DialogFooter>

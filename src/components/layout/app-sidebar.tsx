@@ -170,7 +170,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                     </SidebarMenuSubItem>
                                     <SidebarMenuSubItem>
                                         <SidebarMenuSubButton asChild>
-                                            <a href="#">
+                                            <a href="/asistencias">
                                                 <Clock className="h-4 w-4 mr-2" />
                                                 Asistencias
                                             </a>
