@@ -75,7 +75,7 @@ export default function Dashboard() {
                     </div>
                     {/* Secciones de Preferencias e Ingresos  */}
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 mt-6">
-                        
+
                         <Card className="col-span-1">
                             <CardHeader>
                                 <CardTitle>Preferencia de Membresías (Clientes Frecuentes)</CardTitle>
@@ -85,21 +85,6 @@ export default function Dashboard() {
                                 <PieChart />
                             </CardContent>
                         </Card>
-                        {/* 
-                        Ingresos por Membresías
-                        <Card className="col-span-1">
-                            <CardHeader>
-                                <CardTitle>Ingresos por Membresías</CardTitle>
-                                <CardDescription>
-                                    {period === "monthly" ? "Últimos 30 días" : period === "weekly" ? "Últimos 7 días" : "Último año"}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="h-[300px] flex items-center justify-center">
-                                    <RevenueChart />
-                                </div>
-                            </CardContent>
-                        </Card> */}
                     </div>
                 </div>
             </SidebarInset>
@@ -110,7 +95,7 @@ export default function Dashboard() {
 function PieChart() {
     // Datos de ejemplo para el gráfico circular
     const data = [
-        { name: "Premium", value: 45, color: '#0088FE'},
+        { name: "Premium", value: 45, color: '#0088FE' },
         { name: "Estándar", value: 30, color: '#00C49F' },
         { name: "Básica", value: 25, color: '#FFBB28' },
     ]
@@ -159,69 +144,3 @@ function PieChart() {
         </div>
     )
 }
-/* 
-function RevenueChart() {
-    // Datos de ejemplo para el gráfico de ingresos
-    const months = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
-    const data = [
-        { month: "Ene", premium: 12000, standard: 8000, basic: 5000 },
-        { month: "Feb", premium: 13000, standard: 7500, basic: 5200 },
-        { month: "Mar", premium: 14000, standard: 8200, basic: 5100 },
-        { month: "Abr", premium: 15000, standard: 8800, basic: 5300 },
-        { month: "May", premium: 16000, standard: 9000, basic: 5500 },
-        { month: "Jun", premium: 17000, standard: 9200, basic: 5600 },
-    ]
-
-    const maxValue = Math.max(...data.flatMap((d) => [d.premium, d.standard, d.basic]))
-    const chartHeight = 200
-    const barWidth = 20
-    const gap = 10
-    const groupWidth = barWidth * 3 + gap * 2
-    const chartWidth = (groupWidth + gap) * data.length
-
-    return (
-        <>
-            <div className="w-full overflow-x-auto">
-                <div className="w-full  overflow-x-hidden">
-                    <div className="flex items-end space-x-2 min-w-[600px]">
-                        {data.map((month, i) => (
-                            <div key={i} className="flex flex-col items-center">
-                                <div className="flex items-end space-x-1">
-                                    <div
-                                        className="bg-[#0088FE] rounded-t-sm w-5"
-                                        style={{ height: `${(month.premium / maxValue) * chartHeight}px` }}
-                                    ></div>
-                                    <div
-                                        className="bg-[#00C49F] rounded-t-sm w-5"
-                                        style={{ height: `${(month.standard / maxValue) * chartHeight}px` }}
-                                    ></div>
-                                    <div
-                                        className="bg-[#FFBB28] rounded-t-sm w-5"
-                                        style={{ height: `${(month.basic / maxValue) * chartHeight}px` }}
-                                    ></div>
-                                </div>
-                                <div className="mt-2 text-xs">{month.month}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="flex justify-center mt-6 space-x-6">
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 bg-[#0088FE] mr-2"></div>
-                        <span className="text-sm">Premium</span>
-                    </div>
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 bg-[#00C49F] mr-2"></div>
-                        <span className="text-sm">Estándar</span>
-                    </div>
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 bg-[#FFBB28] mr-2"></div>
-                        <span className="text-sm">Básica</span>
-                    </div>
-                </div>
-            </div>
-
-        </>
-    )
-} */
